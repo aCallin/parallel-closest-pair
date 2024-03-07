@@ -1,6 +1,6 @@
 CC = /opt/opencilk/bin/clang
 FLAGS = -lm -fopencilk -O3
-SRC = main.c point.c test.c
+SRC = src/main.c src/point.c src/test.c
 OUT = closest-pair.out
 
 .PHONY: all
