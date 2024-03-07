@@ -1,0 +1,59 @@
+[CORRECTNESS TESTS]
+n: 2
+Points:
+{ 938.40,   88.70}
+{ 277.80,  691.60}
+Closest:
+{ 938.40,   88.70} and { 277.80,  691.60}, distance: 894.36
+n: 4
+Points:
+{ 779.40,  833.60}
+{ 538.70,   49.30}
+{ 665.00,  142.20}
+{ 236.30,    2.80}
+Closest:
+{ 538.70,   49.30} and { 665.00,  142.20}, distance: 156.79
+n: 8
+Points:
+{ 869.10,    6.00}
+{ 776.40,  392.70}
+{  54.10,  342.70}
+{ 917.30,  573.70}
+{ 521.20,  536.90}
+{ 256.80,  643.00}
+{ 578.30,  153.10}
+{ 286.30,  512.40}
+Closest:
+{ 286.30,  512.40} and { 256.80,  643.00}, distance: 133.89
+
+[PERFORMANCE TESTS]
+n: 65536
+Serial closest point... done
+Time(serial) = 0.026295775 sec
+Parallel closest point... done
+Time(parallel) = 0.011104992 sec
+n: 131072
+Serial closest point... done
+Time(serial) = 0.054838261 sec
+Parallel closest point... done
+Time(parallel) = 0.022037586 sec
+n: 262144
+Serial closest point... done
+Time(serial) = 0.121931113 sec
+Parallel closest point... done
+Time(parallel) = 0.049239645 sec
+n: 524288
+Serial closest point... done
+Time(serial) = 0.262863510 sec
+Parallel closest point... done
+Time(parallel) = 0.104697853 sec
+n: 1048576
+Serial closest point... done
+Time(serial) = 0.575792231 sec
+Parallel closest point... done
+Time(parallel) = 0.217181411 sec
+n: 2097152
+Serial closest point... done
+Time(serial) = 1.282215764 sec
+Parallel closest point... done
+Time(parallel) = 0.473638560 sec
