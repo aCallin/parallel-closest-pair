@@ -39,6 +39,28 @@ int sort_by_y(const void *a, const void *b) {
     return (p1.y > p2.y) ? 1 : -1;
 }
 
+struct Pair closest_pair_naive(struct Point *points, int n) {
+    struct Pair closest;
+    closest.p1 = points[0];
+    closest.p2 = points[1];
+    closest.distance = distance(points[0], points[1]);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (j != i) {
+                float current_distance = distance(points[i], points[j]);
+                if (current_distance < closest.distance) {
+                    closest.p1 = points[i];
+                    closest.p2 = points[j];
+                    closest.distance = current_distance;
+                }
+            }
+        }
+    }
+
+    return closest;
+}
+
 struct Pair closest_pair_dnc_serial(struct Point *points, int n) {
     // Base case
     if (n == 2) {

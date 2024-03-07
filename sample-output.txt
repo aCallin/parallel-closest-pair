@@ -3,16 +3,22 @@ n: 2
 Points:
 { 938.40,   88.70}
 { 277.80,  691.60}
-Closest:
-{ 938.40,   88.70} and { 277.80,  691.60}, distance: 894.36
+(Brute force) p0: { 938.40,   88.70}, p1: { 277.80,  691.60}, distance: 894.36
+(Serial divide-and-conquer) p0: { 938.40,   88.70}, p1: { 277.80,  691.60}, distance: 894.36
+(Parallel divide-and-conquer) p0: { 938.40,   88.70}, p1: { 277.80,  691.60}, distance: 894.36
+SUCCESS
+
 n: 4
 Points:
 { 779.40,  833.60}
 { 538.70,   49.30}
 { 665.00,  142.20}
 { 236.30,    2.80}
-Closest:
-{ 538.70,   49.30} and { 665.00,  142.20}, distance: 156.79
+(Brute force) p0: { 538.70,   49.30}, p1: { 665.00,  142.20}, distance: 156.79
+(Serial divide-and-conquer) p0: { 538.70,   49.30}, p1: { 665.00,  142.20}, distance: 156.79
+(Parallel divide-and-conquer) p0: { 538.70,   49.30}, p1: { 665.00,  142.20}, distance: 156.79
+SUCCESS
+
 n: 8
 Points:
 { 869.10,    6.00}
@@ -23,37 +29,85 @@ Points:
 { 256.80,  643.00}
 { 578.30,  153.10}
 { 286.30,  512.40}
-Closest:
-{ 286.30,  512.40} and { 256.80,  643.00}, distance: 133.89
+(Brute force) p0: { 256.80,  643.00}, p1: { 286.30,  512.40}, distance: 133.89
+(Serial divide-and-conquer) p0: { 286.30,  512.40}, p1: { 256.80,  643.00}, distance: 133.89
+(Parallel divide-and-conquer) p0: { 286.30,  512.40}, p1: { 256.80,  643.00}, distance: 133.89
+SUCCESS
 
-[PERFORMANCE TESTS]
+n: 16
+Points:
+{ 406.80,  313.60}
+{ 393.00,  980.30}
+{ 402.30,  305.90}
+{ 307.00,  816.80}
+{ 139.40,  845.70}
+{ 501.20,  804.30}
+{ 623.00,  737.40}
+{ 442.20,  492.00}
+{ 378.50,  853.80}
+{ 519.90,  432.50}
+{ 831.60,  437.10}
+{ 641.40,  352.70}
+{ 609.20,  898.10}
+{ 995.70,  187.40}
+{ 686.30,  917.10}
+{ 699.70,  728.20}
+(Brute force) p0: { 406.80,  313.60}, p1: { 402.30,  305.90}, distance: 8.92
+(Serial divide-and-conquer) p0: { 402.30,  305.90}, p1: { 406.80,  313.60}, distance: 8.92
+(Parallel divide-and-conquer) p0: { 402.30,  305.90}, p1: { 406.80,  313.60}, distance: 8.92
+SUCCESS
+
+
+[PERFORMANCE TESTS - BRUTE FORCE]
+n: 1024
+Time(brute force) = 0.013699270 sec
+
+n: 2048
+Time(brute force) = 0.054655417 sec
+
+n: 4096
+Time(brute force) = 0.219556375 sec
+
+n: 8192
+Time(brute force) = 0.878758751 sec
+
+n: 16384
+Time(brute force) = 3.537016334 sec
+
+
+[PERFORMANCE TESTS - DIVIDE AND CONQUER]
 n: 65536
-Serial closest point... done
-Time(serial) = 0.026295775 sec
-Parallel closest point... done
-Time(parallel) = 0.011104992 sec
+Time(serial) = 0.026954041 sec
+Time(parallel) = 0.011029835 sec
+
 n: 131072
-Serial closest point... done
-Time(serial) = 0.054838261 sec
-Parallel closest point... done
-Time(parallel) = 0.022037586 sec
+Time(serial) = 0.058044836 sec
+Time(parallel) = 0.022723212 sec
+
 n: 262144
-Serial closest point... done
-Time(serial) = 0.121931113 sec
-Parallel closest point... done
-Time(parallel) = 0.049239645 sec
+Time(serial) = 0.124944549 sec
+Time(parallel) = 0.051208824 sec
+
 n: 524288
-Serial closest point... done
-Time(serial) = 0.262863510 sec
-Parallel closest point... done
-Time(parallel) = 0.104697853 sec
+Time(serial) = 0.268025137 sec
+Time(parallel) = 0.105243429 sec
+
 n: 1048576
-Serial closest point... done
-Time(serial) = 0.575792231 sec
-Parallel closest point... done
-Time(parallel) = 0.217181411 sec
+Time(serial) = 0.583363659 sec
+Time(parallel) = 0.222607810 sec
+
 n: 2097152
-Serial closest point... done
-Time(serial) = 1.282215764 sec
-Parallel closest point... done
-Time(parallel) = 0.473638560 sec
+Time(serial) = 1.278960022 sec
+Time(parallel) = 0.510199965 sec
+
+n: 4194304
+Time(serial) = 2.876321952 sec
+Time(parallel) = 1.091864755 sec
+
+n: 8388608
+Time(serial) = 6.536133517 sec
+Time(parallel) = 2.397313463 sec
+
+n: 16777216
+Time(serial) = 14.884825941 sec
+Time(parallel) = 5.342377391 sec

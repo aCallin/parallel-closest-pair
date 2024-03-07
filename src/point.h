@@ -25,6 +25,7 @@ float distance(struct Point p1, struct Point p2);
 float min(float a, float b);
 int sort_by_x(const void *a, const void *b);
 int sort_by_y(const void *a, const void *b);
+struct Pair closest_pair_naive(struct Point *points, int n);
 struct Pair closest_pair_dnc_serial(struct Point *points, int n);
 struct Pair closest_pair_dnc_parallel(struct Point *points, int n);
 
