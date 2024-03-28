@@ -58,7 +58,6 @@ Points:
 Distances are equal: true
 
 n: 2048
-Points:
 (Brute force) p1: {7104.40, 8277.60}, p2: {7105.40, 8283.10}, distance: 5.59017
 (Serial divide-and-conquer) p1: {7104.40, 8277.60}, p2: {7105.40, 8283.10}, distance: 5.59017
 (Parallel divide-and-conquer) p1: {7104.40, 8277.60}, p2: {7105.40, 8283.10}, distance: 5.59017
@@ -67,67 +66,67 @@ Distances are equal: true
 
 [PERFORMANCE TESTS - BRUTE FORCE]
 n: 128
-Time(brute force) = 0.000220130 sec
+Time(brute force) = 0.000223398 sec
 
 n: 256
-Time(brute force) = 0.000868879 sec
+Time(brute force) = 0.000856075 sec
 
 n: 512
-Time(brute force) = 0.004309865 sec
+Time(brute force) = 0.003440816 sec
 
 n: 1024
-Time(brute force) = 0.013921154 sec
+Time(brute force) = 0.014084136 sec
 
 n: 2048
-Time(brute force) = 0.056199727 sec
+Time(brute force) = 0.055069825 sec
 
 n: 4096
-Time(brute force) = 0.222656993 sec
+Time(brute force) = 0.227246885 sec
 
 n: 8192
-Time(brute force) = 0.903205074 sec
+Time(brute force) = 0.884393753 sec
 
 n: 16384
-Time(brute force) = 3.583345823 sec
+Time(brute force) = 3.539272751 sec
 
 n: 32768
-Time(brute force) = 15.417602446 sec
+Time(brute force) = 14.652781054 sec
 
 
 [PERFORMANCE TESTS - DIVIDE AND CONQUER]
 n: 65536
-Time(serial) = 0.032968729 sec
-Time(parallel) = 0.013369352 sec
+Time(serial) = 0.028049275 sec
+Time(parallel) = 0.011666880 sec
 
 n: 131072
-Time(serial) = 0.074790910 sec
-Time(parallel) = 0.030743562 sec
+Time(serial) = 0.061710972 sec
+Time(parallel) = 0.024600133 sec
 
 n: 262144
-Time(serial) = 0.153311802 sec
-Time(parallel) = 0.067131878 sec
+Time(serial) = 0.132325037 sec
+Time(parallel) = 0.053483350 sec
 
 n: 524288
-Time(serial) = 0.319092002 sec
-Time(parallel) = 0.135883271 sec
+Time(serial) = 0.280992564 sec
+Time(parallel) = 0.112202061 sec
 
 n: 1048576
-Time(serial) = 0.676817992 sec
-Time(parallel) = 0.283316399 sec
+Time(serial) = 0.607092314 sec
+Time(parallel) = 0.240187159 sec
 
 n: 2097152
-Time(serial) = 1.362904559 sec
-Time(parallel) = 0.637658178 sec
+Time(serial) = 1.301961547 sec
+Time(parallel) = 0.512858082 sec
 
 n: 4194304
-Time(serial) = 3.274229876 sec
-Time(parallel) = 1.506221872 sec
+Time(serial) = 2.755048747 sec
+Time(parallel) = 1.082153112 sec
 
 n: 8388608
-Time(serial) = 6.793386575 sec
-Time(parallel) = 2.731158745 sec
+Time(serial) = 6.084696626 sec
+Time(parallel) = 2.364900407 sec
 
 n: 16777216
-Time(serial) = 14.308335366 sec
-Time(parallel) = 5.824108988 sec
+Time(serial) = 13.440612999 sec
+Time(parallel) = 5.171738699 sec
 

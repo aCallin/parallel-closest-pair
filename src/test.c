@@ -10,9 +10,10 @@ void correctness_tests() {
         // Generate points
         struct Point *points = malloc(current_n * sizeof(struct Point));
         generate_points(points, current_n);
-        printf("Points:\n");
-        if (current_n <= 16)
+        if (current_n <= 16) {
+            printf("Points:\n");
             print_points(points, current_n);
+        }
 
         // Solve with brute force approach
         struct Pair a = closest_pair_naive(points, current_n);
