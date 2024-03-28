@@ -37,7 +37,7 @@ void correctness_tests() {
 void performance_tests() {
     // Brute force approach
     printf("[PERFORMANCE TESTS - BRUTE FORCE]\n");
-    int n_naive[] = {1024, 2048, 4096, 8192, 16384};
+    int n_naive[] = {64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384};
     for (int i = 0; i < sizeof(n_naive) / sizeof(n_naive[0]); i++) {
         int current_n = n_naive[i];
         printf("n: %d\n", current_n);
