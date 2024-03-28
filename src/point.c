@@ -32,8 +32,8 @@ void print_points(struct Point *points, int n) {
 
 void generate_points(struct Point *points, int n) {
     for (int i = 0; i < n; i++) {
-        float x = ((rand() % 10000) + 1) / 10.0f; // Values between 1/10 and 1000
-        float y = ((rand() % 10000) + 1) / 10.0f;
+        float x = ((rand() % 100000) + 1) / 10.0f; // Values between 1/10 and 10000
+        float y = ((rand() % 100000) + 1) / 10.0f;
         points[i].x = x;
         points[i].y = y;
     }
