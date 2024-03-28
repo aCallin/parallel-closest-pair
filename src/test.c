@@ -16,15 +16,15 @@ void correctness_tests() {
 
         // Solve with brute force approach
         struct Pair a = closest_pair_naive(points, current_n);
-        printf("(Brute force) p0: {%7.2f, %7.2f}, p1: {%7.2f, %7.2f}, distance: %.5f\n", a.p1.x, a.p1.y, a.p2.x, a.p2.y, a.distance);
+        printf("(Brute force) p1: {%7.2f, %7.2f}, p2: {%7.2f, %7.2f}, distance: %.5f\n", a.p1.x, a.p1.y, a.p2.x, a.p2.y, a.distance);
 
         // Solve with serial divide-and-conquer approach
         struct Pair b = closest_pair_dnc_serial(points, current_n);
-        printf("(Serial divide-and-conquer) p0: {%7.2f, %7.2f}, p1: {%7.2f, %7.2f}, distance: %.5f\n", b.p1.x, b.p1.y, b.p2.x, b.p2.y, b.distance);
+        printf("(Serial divide-and-conquer) p1: {%7.2f, %7.2f}, p2: {%7.2f, %7.2f}, distance: %.5f\n", b.p1.x, b.p1.y, b.p2.x, b.p2.y, b.distance);
 
         // Solve with parallel divide-and-conquer approach
         struct Pair c = closest_pair_dnc_parallel(points, current_n);
-        printf("(Parallel divide-and-conquer) p0: {%7.2f, %7.2f}, p1: {%7.2f, %7.2f}, distance: %.5f\n", c.p1.x, c.p1.y, c.p2.x, c.p2.y, c.distance);
+        printf("(Parallel divide-and-conquer) p1: {%7.2f, %7.2f}, p2: {%7.2f, %7.2f}, distance: %.5f\n", c.p1.x, c.p1.y, c.p2.x, c.p2.y, c.distance);
 
         // Check that serial and parallel divide and conquer approaches give the same result as the naive approach. The points don't need to be the same as long as the distance is
         printf("Distances are equal: %s\n", (a.distance == b.distance && b.distance == c.distance) ? "true" : "false");
