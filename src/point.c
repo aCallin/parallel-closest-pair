@@ -62,12 +62,33 @@ struct Pair closest_pair_naive(struct Point *points, int n) {
 }
 
 struct Pair closest_pair_dnc_serial(struct Point *points, int n) {
-    // Base case
+    // Base cases
     if (n == 2) {
         struct Pair closest;
         closest.p1 = points[0];
         closest.p2 = points[1];
         closest.distance = distance(points[0], points[1]);
+        return closest;
+    } else if (n == 3) {
+        float distanceAB = distance(points[0], points[1]);
+        float distanceAC = distance(points[0], points[2]);
+        float distanceBC = distance(points[1], points[2]);
+
+        struct Pair closest;
+        if (distanceAB <= distanceAC && distanceAB <= distanceBC) {
+            closest.p1 = points[0];
+            closest.p2 = points[1];
+            closest.distance = distanceAB;
+        } else if (distanceAC <= distanceBC) {
+            closest.p1 = points[0];
+            closest.p2 = points[2];
+            closest.distance = distanceAC;
+        } else {
+            closest.p1 = points[1];
+            closest.p2 = points[2];
+            closest.distance = distanceBC;
+        }
+
         return closest;
     }
 
@@ -129,12 +150,33 @@ struct Pair closest_pair_dnc_serial(struct Point *points, int n) {
 }
 
 struct Pair closest_pair_dnc_parallel(struct Point *points, int n) {
-    // Base case
+    // Base cases
     if (n == 2) {
         struct Pair closest;
         closest.p1 = points[0];
         closest.p2 = points[1];
         closest.distance = distance(points[0], points[1]);
+        return closest;
+    } else if (n == 3) {
+        float distanceAB = distance(points[0], points[1]);
+        float distanceAC = distance(points[0], points[2]);
+        float distanceBC = distance(points[1], points[2]);
+
+        struct Pair closest;
+        if (distanceAB <= distanceAC && distanceAB <= distanceBC) {
+            closest.p1 = points[0];
+            closest.p2 = points[1];
+            closest.distance = distanceAB;
+        } else if (distanceAC <= distanceBC) {
+            closest.p1 = points[0];
+            closest.p2 = points[2];
+            closest.distance = distanceAC;
+        } else {
+            closest.p1 = points[1];
+            closest.p2 = points[2];
+            closest.distance = distanceBC;
+        }
+
         return closest;
     }
 
