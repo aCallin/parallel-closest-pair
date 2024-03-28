@@ -1,5 +1,25 @@
 #include "point.h"
 
+static float min(float a, float b) {
+    return (a < b) ? a : b;
+}
+
+static float distance(struct Point p1, struct Point p2) {
+    return hypot((p2.x - p1.x), (p2.y - p1.y));
+}
+
+static int sort_by_x(const void *a, const void *b) {
+    struct Point p1 = *((struct Point *)a);
+    struct Point p2 = *((struct Point *)b);
+    return (p1.x > p2.x) ? 1 : -1;
+}
+
+static int sort_by_y(const void *a, const void *b) {
+    struct Point p1 = *((struct Point *)a);
+    struct Point p2 = *((struct Point *)b);
+    return (p1.y > p2.y) ? 1 : -1;
+}
+
 void print_point(struct Point point) {
     printf("{%7.2f, %7.2f}\n", point.x, point.y);
 }
@@ -17,26 +37,6 @@ void generate_points(struct Point *points, int n) {
         points[i].x = x;
         points[i].y = y;
     }
-}
-
-float distance(struct Point p1, struct Point p2) {
-    return hypot((p2.x - p1.x), (p2.y - p1.y));
-}
-
-float min(float a, float b) {
-    return (a < b) ? a : b;
-}
-
-int sort_by_x(const void *a, const void *b) {
-    struct Point p1 = *((struct Point *)a);
-    struct Point p2 = *((struct Point *)b);
-    return (p1.x > p2.x) ? 1 : -1;
-}
-
-int sort_by_y(const void *a, const void *b) {
-    struct Point p1 = *((struct Point *)a);
-    struct Point p2 = *((struct Point *)b);
-    return (p1.y > p2.y) ? 1 : -1;
 }
 
 struct Pair closest_pair_naive(struct Point *points, int n) {
