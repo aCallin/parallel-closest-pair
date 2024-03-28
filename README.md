@@ -12,3 +12,10 @@ This project uses the divide-and-conquer approach as well as parallelism to solv
 
 ## Building
 `cd` to the project's directory and type `make` to build the program. Similarly, you can type `make run` to build and execute the program in one go. Type `make clean` to remove all build files. [OpenCilk](https://www.opencilk.org/) must be installed to build the parallelized divide-and-conquer approach.
+
+## Results
+Below are some plots of measured execution times, which can be found in the sample output file. $n$ in each trial is a power of 2: $2^7$ to $2^{15}$ in the brute force plot, and $2^{16}$ to $2^{24}$ in the divide-and-conquer plot.
+
+![Brute force results](result-naive.png "Execution times of the brute force approach")
+
+![Divide-and-conquer results](result-dnc.png "Execution times of the serial and parallel divide-and-conquer approaches")
